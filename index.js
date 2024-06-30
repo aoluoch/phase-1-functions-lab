@@ -27,6 +27,4 @@ function distanceFromHqInFeet(distance) {
 
   console.log(distanceTravelledInFeet(50, 42));
 
-  function calculatesFarePrice(start, destination) {
-    //returns the fare for the customer
-  }
+
