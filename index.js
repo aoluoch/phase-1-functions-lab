@@ -27,4 +27,27 @@ function distanceFromHqInFeet(distance) {
 
   console.log(distanceTravelledInFeet(50, 42));
 
+  function calculatesFarePrice(start, destination) {
+    const distance = Math.abs(destination - start);
+
+    if (distance <= 400) {
+        return 0; // First 400 feet are free
+    } else if (distance > 400 && distance <= 2000) {
+        // Distance between 400 and 2000 feet
+        const fare = (distance - 400) * 0.02; // 2 cents per foot
+        return fare;
+    } else if (distance > 2000 && distance < 2500) {
+        // Distance over 2000 feet and under 2500 feet
+        return 25; // Flat fare of $25
+    } else {
+        // Distance over 2500 feet
+        return 'cannot travel that far';
+    }
+}
+
+// Example usage:
+console.log(calculatesFarePrice(0, 300)); 
+console.log(calculatesFarePrice(0, 500)); 
+console.log(calculatesFarePrice(0, 2100)); 
+console.log(calculatesFarePrice(0, 2600)); 
 
