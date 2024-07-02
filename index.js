@@ -40,12 +40,12 @@ function distanceFromHqInFeet(distance) {
         // Distance over 2000 feet and under 2500 feet
         return 25; // Flat fare of $25
     } else {
-        // Distance over 2500 feet
+        
         return 'cannot travel that far';
     }
 }
 
-// Example usage:
+
 console.log(calculatesFarePrice(0, 300)); 
 console.log(calculatesFarePrice(0, 500)); 
 console.log(calculatesFarePrice(0, 2100)); 
